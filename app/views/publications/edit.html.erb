@@ -1,0 +1,9 @@
+<h1>Editing publication</h1>
+<%= error_messages_for :publication %>
+<%= render :partial => "form", :locals => 
+  { :button_label => "Update publication", :publication => @publication } %>
+
+
+
+<%= link_to 'Show', @publication %> |
+<%= link_to 'Back', publications_path %>

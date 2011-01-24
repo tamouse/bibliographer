@@ -1,0 +1,9 @@
+<h1>New publication</h1>
+<%= error_messages_for :publication %>
+<% if (@publication) %>
+<%= render :partial => "form", :locals => 
+  { :button_label => "Create publication", :publication => @publication } %>
+<% else %>
+publication is nil
+<% end %>
+<%= link_to 'Back', publications_path %>

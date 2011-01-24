@@ -1,0 +1,75 @@
+<% form_for(publication) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+<p>Author(s) (comma separated list, enclose first and last name in {} if they are complicated)<br />
+	<%= text_field "authors", "list" %>
+	</p>
+	
+	<p>Editor(s) (comma separated list, enclose first and names in {} if they are complicated)<br />
+		<%= text_field "editors", "list" %>
+  <p>
+    <%= f.label :startpage %><br />
+    <%= f.text_field :startpage %>
+  </p>
+  <p>
+    <%= f.label :endpage %><br />
+    <%= f.text_field :endpage %>
+  </p>
+  <p>
+    <%= f.label :howpublished %><br />
+    <%= f.text_field :howpublished %>
+  </p>
+  <p>
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </p>
+  <p>
+    <%= f.label :volume %><br />
+    <%= f.text_field :volume %>
+  </p>
+  <p>
+    <%= f.label :issue %><br />
+    <%= f.text_field :issue %>
+  </p>
+  <p>
+    <%= f.label :abstract %><br />
+    <%= f.text_area :abstract %>
+  </p>
+  <p>
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.label :month %><br />
+    <%= select "publication", "month", (0...ApplicationHelper.months.size).collect {|m| [ ApplicationHelper.months[m], m ]} %>
+  </p>
+  <p>
+    <%= f.label :series %><br />
+    <%= f.text_field :series %>
+  </p>
+  <p>
+    <%= f.label :publishedin %><br />
+    <%= f.text_field :publishedin %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </p>
+  <p>
+    <%= f.label :pubtype %><br />
+    <%= select "publication", "pubtype", (0...ApplicationHelper.types.size).collect {|t| [ ApplicationHelper.types[t], t ]} %>
+  </p>
+  <p>
+    <%= f.label :priority %><br />
+    <%= select "publication", "priority", (0...ApplicationHelper.priorities.size).collect {|p| [ ApplicationHelper.priorities[p], p ]} %>
+  </p>
+<p>Tags (comma separated list of words. Will be converted to lower case and punctuation stripped off)<br />
+	<%= text_field "tags", "list" %></p>
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>

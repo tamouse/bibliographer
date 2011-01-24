@@ -1,0 +1,48 @@
+<h1>Listing publications</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Startpage</th>
+    <th>Endpage</th>
+    <th>Howpublished</th>
+    <th>Key</th>
+    <th>Volume</th>
+    <th>Issue</th>
+    <th>Abstract</th>
+    <th>Year</th>
+    <th>Month</th>
+    <th>Series</th>
+    <th>Publishedin</th>
+    <th>Note</th>
+    <th>Pubtype</th>
+    <th>Priority</th>
+  </tr>
+
+<% @publications.each do |publication| %>
+  <tr>
+    <td><%=h publication.title %></td>
+    <td><%=h publication.startpage %></td>
+    <td><%=h publication.endpage %></td>
+    <td><%=h publication.howpublished %></td>
+    <td><%=h publication.key %></td>
+    <td><%=h publication.volume %></td>
+    <td><%=h publication.issue %></td>
+    <td><%=h publication.abstract %></td>
+    <td><%=h publication.year %></td>
+    <td><%=h publication.month %></td>
+    <td><%=h publication.series %></td>
+    <td><%=h publication.publishedin %></td>
+    <td><%=h publication.note %></td>
+    <td><%=h publication.pubtype %></td>
+    <td><%=h publication.priority %></td>
+    <td><%= link_to 'Show', publication %></td>
+    <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+    <td><%= link_to 'Destroy', publication, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New publication', new_publication_path %>

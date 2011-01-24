@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  startpage: 1
+  endpage: 1
+  howpublished: MyString
+  key: MyString
+  volume: 1
+  issue: 1
+  abstract: MyText
+  year: 1
+  month: 1
+  series: MyString
+  publishedin: MyString
+  note: MyText
+  pubtype: 1
+  priority: 1
+
+two:
+  title: MyString
+  startpage: 1
+  endpage: 1
+  howpublished: MyString
+  key: MyString
+  volume: 1
+  issue: 1
+  abstract: MyText
+  year: 1
+  month: 1
+  series: MyString
+  publishedin: MyString
+  note: MyText
+  pubtype: 1
+  priority: 1
